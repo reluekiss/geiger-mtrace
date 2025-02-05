@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="demonstration.mp4" alt="Video demostration of running the program">
+  <video src="demonstration.mp4" alt="Video demostration of running the program">
 </h1>
 <br>
 
