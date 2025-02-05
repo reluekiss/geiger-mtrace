@@ -1,4 +1,4 @@
-![Video demonstration of running program](https://github.com/user-attachments/assets/4073106c-7834-4ce2-bd5a-2a347e2f13d2.mp4)
+![Video demonstration of running program](/assets/demonstration.mp4)
 <br>
 
 
