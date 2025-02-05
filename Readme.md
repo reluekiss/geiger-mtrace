@@ -1,5 +1,6 @@
-![Video demonstration of running program](https://raw.githubusercontent.com/reluekiss/geiger-mtrace/demonstration.mp4)
+![Video demonstration of running program](https://github.com/user-attachments/assets/4073106c-7834-4ce2-bd5a-2a347e2f13d2)
 <br>
+
 
 Malloc geiger counter using LD_PRELOAD to intercept malloc calls and [raylib](https://github.com/raysan5/raylib) for the audio backend. This project is inspired by [Malloc Geiger](https://github.com/laserallan/malloc_geiger) and [Alloc Geiger](https://github.com/cuviper/alloc_geiger?tab=readme-ov-file).
 
