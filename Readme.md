@@ -1,5 +1,9 @@
-![Video demonstration of running program](https://github.com/user-attachments/assets/4073106c-7834-4ce2-bd5a-2a347e2f13d2.mp4)
-<br>
+<video width="640" height="480" controls>
+  <source src="https://github.com/user-attachments/assets/e86ae48b-ca0b-4db1-996f-ec6ed9480e68" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 
 Malloc geiger counter using LD_PRELOAD to intercept malloc calls and [raylib](https://github.com/raysan5/raylib) for the audio backend. This project is inspired by [Malloc Geiger](https://github.com/laserallan/malloc_geiger) and [Alloc Geiger](https://github.com/cuviper/alloc_geiger?tab=readme-ov-file).
