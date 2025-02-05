@@ -1,6 +1,4 @@
-<h1 align="center">
-  <video src="demonstration.mp4" alt="Video demostration of running the program">
-</h1>
+![Video demonstration of running the program](./demonstration.mp4)
 <br>
 
 Malloc geiger counter using LD_PRELOAD to intercept malloc calls and [raylib](https://github.com/raysan5/raylib) for the audio backend. This project is inspired by [Malloc Geiger](https://github.com/laserallan/malloc_geiger) and [Alloc Geiger](https://github.com/cuviper/alloc_geiger?tab=readme-ov-file).
