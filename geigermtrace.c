@@ -19,7 +19,7 @@ static double lastBeepTime = 0.0;
 const double beepCooldown = 0.0; 
 
 const float beepFrequency = 1000.0f;
-const float beepDuration = 0.025f;
+const float beepDuration = 0.015f;
 const int sampleRate = 44100;
 const int beepFrameCount = (int)(beepDuration * sampleRate);
 

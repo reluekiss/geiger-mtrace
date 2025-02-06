@@ -77,7 +77,7 @@ int main(void)
             DrawLine(0, screenHeight/2, screenWidth, screenHeight/2, BLACK);
         EndDrawing();
 
-        usleep(50000);
+        usleep(100000);
     }
 
     CloseWindow();

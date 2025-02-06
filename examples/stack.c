@@ -36,7 +36,7 @@ int main(void) {
                 printf("pop: stack empty\n");
             }
         }
-        usleep(50000);
+        usleep(100000);
     }
 
     return 0;
