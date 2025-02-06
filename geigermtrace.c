@@ -10,6 +10,9 @@
 typedef void* (*malloc_t)(size_t);
 static malloc_t real_malloc = NULL;
 
+typedef void (*free_t)(void *);
+static free_t real_free = NULL;
+
 static pthread_mutex_t beepMutex = PTHREAD_MUTEX_INITIALIZER;
 static int beepPending = 0;
 static double lastBeepTime = 0.0;
@@ -86,4 +89,18 @@ void* malloc(size_t size)
     pthread_mutex_unlock(&beepMutex);
 
     return real_malloc(size);
+}
+
+void free(void *ptr)
+{
+    if (!real_free)
+        real_free = (free_t)dlsym(RTLD_NEXT, "free");
+
+    double now = time(NULL);
+    pthread_mutex_lock(&beepMutex);
+    if ((now - lastBeepTime) >= beepCooldown) {
+        beepPending = 1;
+        lastBeepTime = now;
+    }
+    pthread_mutex_unlock(&beepMutex);
 }

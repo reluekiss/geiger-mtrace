@@ -12,6 +12,7 @@ int main(void) {
             void *ptr = malloc(size);
             printf("malloc(%zu) at %p\n", size, ptr);
             free(ptr);
+            printf("free(%zu) at %p\n", size, ptr);
         }
         usleep(50000); 
     }
