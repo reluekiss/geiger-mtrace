@@ -11,5 +11,5 @@ LD_PRELOAD=./libgeigermtrace.so <program>
 Quick start
 ```bash
 make
-make test
+make stack
 ```

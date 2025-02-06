@@ -71,10 +71,10 @@ int main(void)
         }
 
         BeginDrawing();
-            ClearBackground(RAYWHITE);
+            ClearBackground(GRAY);
             if (pointCount > 1)
                 DrawLineStrip(points, pointCount, RED);
-            DrawLine(0, screenHeight/2, screenWidth, screenHeight/2, GRAY);
+            DrawLine(0, screenHeight/2, screenWidth, screenHeight/2, BLACK);
         EndDrawing();
 
         usleep(50000);

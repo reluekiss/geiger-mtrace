@@ -3,34 +3,33 @@ CFLAGS = -O2 -Wall
 LIBFLAGS = -shared -fPIC -ldl -lpthread -lm
 RAYLIB = /usr/local/lib/libraylib.so
 
-all: examples/test libgeigermtrace.so
+all: examples/stack libgeigermtrace.so
 
-examples: examples/stack examples/stock examples/test
+examples: libgeigermtrace.so examples/stack examples/stock examples/test
 
-examples/stock: examples/stock.c
-	mkdir -p build
+examples/stock: build examples/stock.c
 	$(CC) $(CFLAGS) $(RAYLIB) -lm examples/stock.c -o build/stock
 
-stock: all
+stock: examples/stock 
 	LD_PRELOAD=./build/libgeigermtrace.so ./build/stock
 
-examples/stack: examples/stack.c
-	mkdir -p build
+examples/stack: build examples/stack.c
 	$(CC) $(CFLAGS) examples/stack.c -o build/stack
 
-stack: all
+stack: examples/stack
 	LD_PRELOAD=./build/libgeigermtrace.so ./build/stack
 
-examples/test: examples/test.c
-	mkdir -p build
+examples/test: build examples/test.c
 	$(CC) $(CFLAGS) examples/test.c -o build/test
 
-test: all
+test: examples/test
 	LD_PRELOAD=./build/libgeigermtrace.so ./build/test
 
-libgeigermtrace.so: geigermtrace.c
-	mkdir -p build
+libgeigermtrace.so: build geigermtrace.c
 	$(CC) $(CFLAGS) $(LIBFLAGS) -o build/libgeigermtrace.so geigermtrace.c $(RAYLIB)
+
+build:
+	mkdir -p build
 
 clean:
 	rm -rf build
